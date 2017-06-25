@@ -61,4 +61,3 @@ run = run,
 @Create_antispam_bot 
 --]]
 --@Mr_AL_i
---@TeleVigilant_Team
