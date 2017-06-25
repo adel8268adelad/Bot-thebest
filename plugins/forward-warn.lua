@@ -60,4 +60,3 @@ run = run,
 @CliApi
 @Create_antispam_bot 
 --]]
---@Mr_AL_i
