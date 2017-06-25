@@ -7,7 +7,7 @@ local function run(msg, matches)
   end
   local data = load_data(_config.moderation.data)
   if data[tostring(msg.to.id)]['settings']['lock_arabic'] then
-    if data[tostring(msg.to.id)]['settings']['lock_arabic'] == 'yes' then
+    if data[tostring(msg.to.id)]['settings']['lock_arabic'] == '✅' then
 	  if is_whitelisted(msg.from.id) then
 		return
 	  end
