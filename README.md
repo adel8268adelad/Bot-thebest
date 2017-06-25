@@ -1,4 +1,4 @@
-# [TeleVigilant](https://telegram.me/TeleVigilant_Super)
+# [DooyBot](https://telegram.me/DooyBot)
 
 [![Join the chat at https://gitter.im/SEEDTEAM/TeleSeed](https://badges.gitter.im/SEEDTEAM/TeleSeed.svg)](https://gitter.im/SEEDTEAM/TeleSeed?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -437,14 +437,6 @@ _Sudo users and admins can also use this commands in all groups_
 # Tested on Ubuntu 14.04. For other OSs, check out https://github.com/yagop/telegram-bot/wiki/Installation
 sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev make autoconf unzip git redis-server g++ libjansson-dev libpython-dev expat libexpat1-dev
 
-# Let's install the bot.
-cd $HOME
-git clone https://github.com/SEEDTEAM/TeleSeed.git
-cd TeleSeed
-chmod +x launch.sh
-./launch.sh install
-./launch.sh # Enter a phone number & confirmation code.
-```
 ### One command
 To install everything in one command (useful for VPS deployment) on Debian-based distros, use:
 ```sh
@@ -458,10 +450,7 @@ After you run the bot for first time, send it `!id`. Get your ID and stop the bo
 Open ./data/config.lua and add your ID to the "sudo_users" section in the following format:
 ```
   sudo_users = {
-    110626080,
-    103649648,
-    111020322,
-    0,
+   ,
     YourID
   }
 ```
@@ -473,13 +462,7 @@ Create a realm using the `!createrealm` command.
 
 Check out this [tutorial by Telegram Geeks](http://telegramgeeks.com/2016/01/teleseed-tutorial/) for further assistance with setup and installation.
 
-**Do not contact us** in private for support.
-Join our bot development group by sending `/join 56670147` to [@TeleSeed](https://telegram.me/TeleSeed)
-
-# Special thanks to
-[@seyedan25](https://telegram.me/seyedan25)
-
-For managing [@Spiran_TG](https://telegram.me/Spiran_TG) on Telegram.
+For managing [@DooyBot](https://telegram.me/DooyBot) on Telegram.
 
 For graphic designs.
 
@@ -489,12 +472,10 @@ For graphic designs.
 
 # Our team!
 
-[aQa.ALi](https://github.com/Mr_AL_i) ([Telegram](https://telegram.me/Mr_AL_i))
+[MRALi](https://github.com/) ([Telegram](https://telegram.me/Mr_AL_i))
 
-[.](https://github.com/) ([Telegram](https://telegram.me/))
-
-[.](https://github.com/) ([Telegram](https://telegram.me/))
+[ADEL](https://github.com/) ([Telegram](https://telegram.me/ad8268))
 
 ### Our Telegram channels:
 
-Persian: [@TeleVigilant_Team](https://telegram.me/TeleVigilant_Team)
+Persian: [@DooyBot_Team](https://telegram.me/DooyBot_Team)
