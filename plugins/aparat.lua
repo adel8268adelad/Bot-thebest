@@ -1,11 +1,4 @@
---[[
 
-#
-#     @GPMOD
-#   @Dragon_Born
-#      
-
-]]
 
 local function run(msg, matches)
 	if matches[1]:lower() == 'aparat' then
@@ -13,11 +6,11 @@ local function run(msg, matches)
 		local jdat = json:decode(url)
 
 		local items = jdat.videobysearch
-		text = 'نتیجه جستوجو در آپارات: \n'
+		text = 'نتیجه جستجو در آپارات: \n'
 		for i = 1, #items do
-		text = text..'\n'..i..'- '..items[i].title..'  -  تعداد بازدید: '..items[i].visit_cnt..'\n    لینک: aparat.com/v/'..items[i].uid
+		text = text..'\n\n'..i..'-'..items[i].title..'\nتعداد بازدید: '..items[i].visit_cnt..'\n   لینک: aparat.com/v/'..items[i].uid
 		end
-		text = text..'\n\n@SPIRAN_CHANNEL'
+		text = text..'\n\n@cruel_channel'
 		return text
 	end
 end
