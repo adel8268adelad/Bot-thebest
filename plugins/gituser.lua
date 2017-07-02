@@ -14,7 +14,7 @@ local function run(msg, matches)
   ..'\nForks: '..jdat.forks_count
   ..'\nIssues: '..jdat.open_issues
   ..'\nRepo URL: '..jdat.html_url
-  ..'\n\n@Alominateam'
+  ..'\n\n@DooyBot_Team'
   local file = download_to_file(jdat.owner.avatar_url,'Hextor.webp')
   send_document('chat#id'..msg.to.id,file,ok_cb,false)
   return text
@@ -29,3 +29,4 @@ return {
   run = run
 }
 
+--tnx to alominateam
