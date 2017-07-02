@@ -26,3 +26,15 @@ return {
 }
 
 end
+--usage = {
+		"gps loc (lat,lon) : لوکيشن موقعيت",
+		"gps link (lat,lon) : لينک گوگل مپ",
+		"gps map (lat,lon) : نقشه موقعيت",
+		"gps view (lat,lon) : تصوير واقعي",
+	},
+	patterns = {
+		"^[Gg]ps (loc) ([^,]*)[,%s]([^,]*)$",
+		"^[Gg]ps (map) ([^,]*)[,%s]([^,]*)$",
+		"^[Gg]ps (view) ([^,]*)[,%s]([^,]*)$",
+		"^[Gg]ps (link) ([^,]*)[,%s]([^,]*)$",
+}, 
