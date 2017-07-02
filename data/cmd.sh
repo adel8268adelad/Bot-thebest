@@ -19,7 +19,7 @@ memUsed_m=$(($memTotal_m-$memFree_m-$memBuffer_m-$memCache_m))
 
 memUsedPrc=$((($memUsed_b*100)/$memTotal_b))
 
-echo "🔱 SUDO TM SERVER INFO:"
+echo "🔱 DOOYBOT TM SERVER INFO:"
 echo "➖➖➖➖"
 echo "✅ Memory: $memUsed_m MB (4GB) \n💠 $memUsedPrc% used !"
 echo "➖➖"
