@@ -117,11 +117,11 @@ local function all(msg,target,receiver)
   text = text.."\n\n"..muted_user_list
   local ban_list = ban_list(target)
   text = text.."\n\n"..ban_list
-  local file = io.open("./groups/all/"..target.."all.txt", "w")
+  local file = io.open("./system/chats/all/"..target.."all.txt", "w")
   file:write(text)
   file:flush()
   file:close()
-  send_document(receiver,"./groups/all/"..target.."all.txt", ok_cb, false)
+  send_document(receiver,"./system/chats/all/"..target.."all.txt", ok_cb, false)
   return
 end
 
@@ -131,7 +131,7 @@ local function run(msg, matches)
     local target = matches[2]
     return all(msg,target,receiver)
   end
-  if not is_owner(msg) then
+  if not is_owner(msg) or not is_vip(msg) then
     return
   end
   if matches[1] == "all" and not matches[2] then
