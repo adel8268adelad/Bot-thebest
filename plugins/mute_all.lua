@@ -1,8 +1,9 @@
---[[@UB_CH | @ValtMan ]]
+-- by @Blackwolf_admin 
+-- channel : @open_sources
 do
 local function pre_process(msg)
  local hash = 'muteall:'..msg.to.id
-  if redis:get(hash) and msg.to.type == 'channel'  then
+  if redis:get(hash) and msg.to.type == 'channel' and not is_momod(msg)  then
    delete_msg(msg.id, ok_cb, false)
        end
     return msg
@@ -15,9 +16,16 @@ local function run(msg, matches)
               redis:set(hash, true)
              return "mute all has been enabled"
  else
- local num = tonumber(matches[2]) * 60
- redis:setex(hash, num, true)
- return "mute all has been enabled for |#"..matches[2].."#| minutes"
+-- by @Blackwolf_admin 
+local hour = string.gsub(matches[2], 'h', '')
+ local num1 = tonumber(hour) * 3600
+local minutes = string.gsub(matches[3], 'm', '')
+ local num2 = tonumber(minutes) * 60
+local second = string.gsub(matches[4], 's', '')
+ local num3 = tonumber(second) 
+local num4 = tonumber(num1 + num2 + num3)
+redis:setex(hash, num4, true)
+ return "mute all has been enabled for\n⏺ hour(s) : "..matches[2].."\n⏺ minute(s) : "..matches[3].." \n⏺ second(s) : "..matches[4]..""
  end
  end
 if matches[1] == 'unmuteall' and is_momod(msg) then
@@ -30,9 +38,11 @@ return {
    patterns = {
       '^[/!#](muteall)$',
       '^[/!#](unmuteall)$',
-   '^[/!#](muteall) (%d+)$',
+   '^[/!#](muteall) (.*) (.*) (.*)$',
  },
 run = run,
   pre_process = pre_process
 }
 end
+-- by @Blackwolf_admin 
+-- our channel : @open_sources 
