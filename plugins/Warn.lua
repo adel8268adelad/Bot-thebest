@@ -189,5 +189,3 @@ return {
   }, 
   run = run 
 }
-
---By Arian
